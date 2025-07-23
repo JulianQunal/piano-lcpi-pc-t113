@@ -1,3 +1,32 @@
+# Introduction
+
+The “Piano Tutor” is an embedded educational system that pairs a 25‑note piano keyboard with a visual and tactile interface to guide the learner in real time. Key components include:
+
+Base board: LCPI‑PC‑F133‑T113‑D1S‑V1.3 (Allwinner T113‑S3, dual‑core Cortex‑A7).
+
+5×5 key and LED matrices: shift registers (74HC595 and 74HC165) reduce required GPIO from 50 down to just 12 pins.
+
+OLED display (SSD1306) driven via I²C bit‑banging to show menus, lessons, and feedback.
+
+Physical buttons for switching modes (sequential lessons, free play, guided tutorial).
+
+Firmware: boots with Buildroot + Debian Bookworm, scans the key matrix, lights LEDs to indicate the next note, and updates the on‑screen UI.
+
+# Potential Applications
+
+- Music Education
+  	- Interactive piano lessons without requiring an in‑person teacher.
+
+	- Sight‑reading exercises and ear‑training drills.
+
+- Entertainment & Art Installations
+
+	- Interactive exhibits where visitors “play” guided musical pieces.
+
+- DIY & Maker Projects
+
+	- A platform for extensions: integrate with modular synthesizers, MIDI control, or IoT.
+
 # Embedded System
 This part of the piano project follows the instructions provided by Carlos Iván Camargo Bareño, our instructor for the semester. He shared a book and a guide detailing how to set up the embedded system on our board. The text is available in the `Resources` folder for further reference.
 
